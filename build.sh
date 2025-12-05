@@ -16,5 +16,7 @@ logInfoMessage "Linting tf code repository"
 
 cd $code/${CODE_PATH}
 output=`tflint -f ${FORMAT_ARG}`
-echo "${output}"
+logInfoMessage "${output}"
 
+TASK_STATUS=$?
+saveTaskStatus ${TASK_STATUS} ${ACTIVITY_SUB_TASK_CODE}
