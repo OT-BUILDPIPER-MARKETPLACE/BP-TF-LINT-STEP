@@ -34,4 +34,6 @@ ENV SLEEP_DURATION 5s
 
 USER buildpiper
 
+WORKDIR /home/buildpiper
+
 ENTRYPOINT [ "./build.sh" ]
