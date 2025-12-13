@@ -7,6 +7,7 @@ RUN unzip /usr/local/bin/tflint_linux_amd64.zip -d /usr/local/bin
 RUN addgroup -g 65522 buildpiper && \
     adduser -u 65522 -G buildpiper -D -h /home/buildpiper buildpiper && \
     mkdir -p \
+      / src
       /app \
       /bp/data \
       /bp/execution_dir \
@@ -14,7 +15,7 @@ RUN addgroup -g 65522 buildpiper && \
       /opt/buildpiper/shell-functions \
       /opt/buildpiper/data \
       /home/buildpiper/reports && \
-    chown -R buildpiper:buildpiper /app /bp /opt /usr /home/buildpiper
+    chown -R buildpiper:buildpiper /app /bp /opt /usr /src /home/buildpiper
 
 RUN apk add --no-cache --upgrade bash
 RUN apk add jq
