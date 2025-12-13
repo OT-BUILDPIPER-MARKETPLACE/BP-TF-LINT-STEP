@@ -7,7 +7,7 @@ RUN unzip /usr/local/bin/tflint_linux_amd64.zip -d /usr/local/bin
 RUN addgroup -g 65522 buildpiper && \
     adduser -u 65522 -G buildpiper -D -h /home/buildpiper buildpiper && \
     mkdir -p \
-      / src
+      /src \
       /app \
       /bp/data \
       /bp/execution_dir \
