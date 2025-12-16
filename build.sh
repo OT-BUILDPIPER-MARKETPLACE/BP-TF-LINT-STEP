@@ -7,7 +7,7 @@ source /opt/buildpiper/shell-functions/file-functions.sh
 source /opt/buildpiper/shell-functions/aws-functions.sh
 
 code="$WORKSPACE/$CODEBASE_DIR"
-echo "${code}/${CODE_PATH}"
+
 
 logInfoMessage "I'll lint tf code repository"
 sleep $SLEEP_DURATION
@@ -15,6 +15,7 @@ logInfoMessage "Executing command"
 logInfoMessage "Linting tf code repository"
 
 cd $code/${CODE_PATH}
+logInfoMessage "${code}/${CODE_PATH}"
 output=`tflint -f ${FORMAT_ARG}`
 logInfoMessage "${output}"
 
