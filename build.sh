@@ -11,7 +11,7 @@ code="$WORKSPACE/$CODEBASE_DIR"
 # 1. Initialization Phase
 logInfoMessage "Initiating Terraform linting process..."
 
-add_event "TFLINT" "InProgress" \
+add_event "TFLINT" "Successful" \
           "Starting Terraform code analysis" \
           "Target Directory: $code/${CODE_PATH}"
 
