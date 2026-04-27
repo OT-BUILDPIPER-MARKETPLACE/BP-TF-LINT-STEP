@@ -11,10 +11,6 @@ code="$WORKSPACE/$CODEBASE_DIR"
 # 1. Initialization Phase
 logInfoMessage "Initiating Terraform linting process..."
 
-add_event "TFLINT INITIATED" "Successful" \
-          "Starting Terraform code analysis" \
-          "Target Directory: $code/${CODE_PATH}"
-
 sleep $SLEEP_DURATION
 
 # 2. Execution Phase
@@ -37,6 +33,7 @@ logInfoMessage "tflint execution output: ${output}"
 # 3. Validation and Result Phase
 if [ $TASK_STATUS -eq 0 ]; then
   logInfoMessage "Terraform linting completed successfully. No issues found."
+  logInfoMessage "Congratulations tf succeeded!!!"
   
   add_event "TFLINT COMPLETE" "Successful" \
             "Terraform code passed all linting checks" \
