@@ -6,6 +6,8 @@ source /opt/buildpiper/shell-functions/str-functions.sh
 source /opt/buildpiper/shell-functions/file-functions.sh
 source /opt/buildpiper/shell-functions/aws-functions.sh
 
+logInfoMessage "SCRIPT VERSION: v2-no-initiated-event"
+
 code="$WORKSPACE/$CODEBASE_DIR"
 
 # 1. Initialization Phase
